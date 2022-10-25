@@ -14,7 +14,6 @@ RUN mvn install:install-file -Dfile=xmlsec-1.4.2-ADSI-1.0.jar -DgroupId=org.apac
 
 WORKDIR /veronica-open-api
 
-# RUN mvn -U clean package install
 RUN mvn -U clean install
 
 # RUN /usr/bin/env /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -cp /var/folders/6k/p6cysmdj50l702b017zl9q9w0000gn/T/cp_92riqkfcv0yw40jq9814stqdv.jar com.rolandopalermo.facturacion.ec.app.VeronicaApplication
