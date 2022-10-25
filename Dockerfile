@@ -18,4 +18,4 @@ RUN mvn -U clean install
 
 WORKDIR /veronica-open-api/app
 
-RUN mvn spring-boot:run -Pdevelopment
+# RUN mvn spring-boot:run -Pdevelopment
