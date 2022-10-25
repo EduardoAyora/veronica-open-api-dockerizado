@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:11
+    restart: always
+    volumes:
+    - db_veronica:/var/lib/postgresql/data
+    - ./postgresql.conf:/var/lib/postgresql/data/postgresql.conf
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+    - "5432:5432"
+  veronica:
+    build:
+      context: .
+    depends_on:
+      - postgres
+volumes:
+  db_veronica:
