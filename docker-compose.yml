@@ -17,5 +17,7 @@ services:
       context: .
     depends_on:
       - postgres
+    ports:
+    - "8080:8080"
 volumes:
   db_veronica:
